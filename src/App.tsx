@@ -2,7 +2,7 @@ import { debug } from "console";
 import React from "react";
 import "./App.css";
 import { ICell } from "./Figth/Cell";
-import { Table } from "./Figth/Table";
+import { Room, Table } from "./Figth/Table";
 import { generateInt, shuffle } from "./utils/helpers";
 import { allRooms } from "./utils/roomsBase1";
 const maxRoomNumber = 10;
@@ -11,12 +11,12 @@ interface IConnection {
   from: number;
   to: number;
 }
-const generateDungeon = (): ICell[][][] => {
+const generateDungeon = (): Room[] => {
   const randomRooms = shuffle(allRooms).slice(0, maxRoomNumber);
   return randomRooms;
 };
 
-const generateConnections = (rooms: ICell[][][]): IConnection[] => {
+const generateConnections = (rooms: Room[]): IConnection[] => {
   const connections = [{ from: 0, to: 1 }];
   while (true) {
     const unconnected = findUnconnected(connections);
@@ -75,28 +75,11 @@ const connectedRooms = (room: number, connections: IConnection[]): number[] => {
   return rooms;
 };
 
-//   do {
-//     let notVisited = rooms.flat();
-//     let visited: ICell[][] = [];
-//     let toVisit = [notVisited[0]];
-//     const roomConnections = connections.filter(
-//       (c: IConnection) => c.to === 0 || c.from === 0
-//     );
-//     roomConnections.forEach((c: IConnection) => {
-//       const entryInd = c.from;
-//       const exitInd = c.to;
-
-//     });
-//   } while (true);
-
-//   return connections;
-// };
-
 export const Debug = ({ data }: { data: IConnection[] }) => {
   return (
     <div>
-      {data.map((d: IConnection) => (
-        <p>{`from ${d.from} to ${d.to}`}</p>
+      {data.map((d: IConnection, i: number) => (
+        <p key={i}>{`from ${d.from} to ${d.to}`}</p>
       ))}
     </div>
   );

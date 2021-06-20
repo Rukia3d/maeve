@@ -1,8 +1,10 @@
 import React from "react";
 import { ICell } from "./Cell";
 import { Row } from "./Row";
+export type Room = ICell[][];
+
 interface ITableProps {
-  data: ICell[][];
+  data: Room;
 }
 
 export const Table = ({ data }: ITableProps) => {
