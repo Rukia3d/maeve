@@ -102,7 +102,7 @@ export const allRooms: ICell[][][] = [
   [
     [{ type: "open" }, { type: "open" }, { type: "open" }],
     [{ type: "open" }, { type: "open" }, { type: "open" }],
-    [{ type: "open" }, { type: "open" }, { type: "rock" }],
+    [{ type: "open" }, { type: "open" }],
   ],
 
   // xxxx
@@ -111,7 +111,7 @@ export const allRooms: ICell[][][] = [
   [
     [{ type: "open" }, { type: "open" }, { type: "open" }, { type: "open" }],
     [{ type: "open" }, { type: "open" }, { type: "open" }, { type: "open" }],
-    [{ type: "open" }, { type: "open" }, { type: "rock" }, { type: "rock" }],
+    [{ type: "open" }, { type: "open" }],
   ],
 
   // xxxxx
@@ -132,13 +132,7 @@ export const allRooms: ICell[][][] = [
       { type: "open" },
       { type: "open" },
     ],
-    [
-      { type: "open" },
-      { type: "open" },
-      { type: "rock" },
-      { type: "rock" },
-      { type: "rock" },
-    ],
+    [{ type: "open" }, { type: "open" }],
   ],
 
   // xxxx
@@ -148,8 +142,8 @@ export const allRooms: ICell[][][] = [
   [
     [{ type: "open" }, { type: "open" }, { type: "open" }, { type: "open" }],
     [{ type: "open" }, { type: "open" }, { type: "open" }, { type: "open" }],
-    [{ type: "open" }, { type: "open" }, { type: "rock" }, { type: "rock" }],
-    [{ type: "open" }, { type: "open" }, { type: "rock" }, { type: "rock" }],
+    [{ type: "open" }, { type: "open" }],
+    [{ type: "open" }, { type: "open" }],
   ],
 
   // xxxxx
@@ -200,13 +194,7 @@ export const allRooms: ICell[][][] = [
       { type: "rock" },
       { type: "rock" },
     ],
-    [
-      { type: "open" },
-      { type: "open" },
-      { type: "open" },
-      { type: "rock" },
-      { type: "rock" },
-    ],
+    [{ type: "open" }, { type: "open" }, { type: "open" }],
   ],
 
   // xxxx
